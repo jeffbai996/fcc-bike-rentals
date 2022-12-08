@@ -6,6 +6,13 @@ PSQL="psql -X --username=freecodecamp --dbname=bikes --tuples-only -c"
 
 echo -e "\n~~~~~ Bike Rental Shop ~~~~~\n\n"
 
+VALIDATE_INPUT() {
+  if [[ ! $1 =~ ^[0-9]+$ ]]; then
+    display_error "That is not a valid bike number."
+    MAIN_MENU
+  fi
+}
+
 MAIN_MENU() {
   if [[ $1 ]]
   then
