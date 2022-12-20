@@ -20,7 +20,7 @@ DISPLAY_ERROR() {
 MAIN_MENU() {
   if [[ $1 ]]
   then
-    echo -e "\n$1"
+    DISPLAY_ERROR "$1"
   fi
 
   echo "How may I help you?" 
