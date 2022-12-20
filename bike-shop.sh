@@ -13,6 +13,10 @@ VALIDATE_INPUT() {
   fi
 }
 
+DISPLAY_ERROR() {
+  echo -e "\nError: %s\n\n" "$1"
+}
+
 MAIN_MENU() {
   if [[ $1 ]]
   then
